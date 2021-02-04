@@ -5,6 +5,7 @@ import Vue from 'vue'
 import App from './components/App'
 import 'uikit/dist/css/uikit.min.css'
 
+
 import router from './router/index'
 
 new Vue({

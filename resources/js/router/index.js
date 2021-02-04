@@ -11,17 +11,16 @@ Vue.use(VueRouter)
 export default new VueRouter({
     mode: "history",
     base: __dirname,
-        routes:[
-            {
-                path: '/',
-                component: Home,
-                name: 'home'
-            },
-            {
-                path: '/posts',
-                component: () => import('../views/Card/Card'),
-                name: 'posts'
-            }
-        ]
-}
-)
+    routes: [{
+            path: '/',
+            component: Home,
+            name: 'home'
+        },
+        {
+            path: '/posts',
+            component: () =>
+                import ('../views/Cards/Cards'),
+            name: 'posts'
+        }
+    ]
+})

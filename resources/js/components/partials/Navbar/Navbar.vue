@@ -3,21 +3,9 @@
         <div class="uk-navbar-left">
 
             <ul class="uk-navbar-nav">
-                <li class="uk-active"><a href="#">Active</a></li>
-                <li>
-                    <a href="#">Parent</a>
-                    <div class="uk-navbar-dropdown">
-                        <ul class="uk-nav uk-navbar-dropdown-nav">
-                            <li class="uk-active"><a href="#">Active</a></li>
-                            <li><a href="#">sdv</a></li>
-                            <li><a href="#">Item</a></li>
-                            <li>
-                                <router-link to="/">home</router-link>
-                            </li>
-                        </ul>
-                    </div>
+                <li v-for="(link, key) in links" :key="key">
+                    <router-link :to="link.url">{{link.title}}</router-link>
                 </li>
-                <li><a href="#">Item</a></li>
             </ul>
 
         </div>
@@ -26,6 +14,14 @@
 
 <script>
     export default {
-        name: 'Navbar'
+        name: 'Navbar',
+        data() {
+            return {
+                links: [
+                    {title: 'Home', url: '/'},
+                    {title: 'Posts', url: '/posts'}
+                ]
+            }
+        }
     };
 </script>

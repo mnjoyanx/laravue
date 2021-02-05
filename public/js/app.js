@@ -2034,6 +2034,18 @@ vue__WEBPACK_IMPORTED_MODULE_1__.default.use(vue_router__WEBPACK_IMPORTED_MODULE
       return __webpack_require__.e(/*! import() */ "resources_js_views_Cards_Cards_vue").then(__webpack_require__.bind(__webpack_require__, /*! ../views/Cards/Cards */ "./resources/js/views/Cards/Cards.vue"));
     },
     name: 'posts'
+  }, {
+    path: '/posts/:id',
+    component: function component() {
+      return __webpack_require__.e(/*! import() */ "resources_js_views_CurrentCard_vue").then(__webpack_require__.bind(__webpack_require__, /*! ../views/CurrentCard */ "./resources/js/views/CurrentCard.vue"));
+    },
+    name: 'current-card'
+  }, {
+    path: '/create',
+    component: function component() {
+      return __webpack_require__.e(/*! import() */ "resources_js_views_CreatePost_vue").then(__webpack_require__.bind(__webpack_require__, /*! ../views/CreatePost */ "./resources/js/views/CreatePost.vue"));
+    },
+    name: 'create-post'
   }]
 }));
 
@@ -53516,7 +53528,7 @@ Vue.compile = compileToFunctions;
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames not based on template
-/******/ 			if (chunkId === "resources_js_views_Cards_Cards_vue") return "js/" + chunkId + ".js";
+/******/ 			if ({"resources_js_views_Cards_Cards_vue":1,"resources_js_views_CurrentCard_vue":1,"resources_js_views_CreatePost_vue":1}[chunkId]) return "js/" + chunkId + ".js";
 /******/ 			// return url for filenames based on template
 /******/ 			return undefined;
 /******/ 		};
@@ -53643,7 +53655,7 @@ Vue.compile = compileToFunctions;
 /******/ 					if(installedChunkData) {
 /******/ 						promises.push(installedChunkData[2]);
 /******/ 					} else {
-/******/ 						if("resources_js_views_Cards_Cards_vue" == chunkId) {
+/******/ 						if("css/app" != chunkId) {
 /******/ 							// setup Promise in chunk cache
 /******/ 							var promise = new Promise((resolve, reject) => {
 /******/ 								installedChunkData = installedChunks[chunkId] = [resolve, reject];

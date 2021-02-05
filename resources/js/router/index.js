@@ -21,6 +21,19 @@ export default new VueRouter({
             component: () =>
                 import ('../views/Cards/Cards'),
             name: 'posts'
+        },
+        {
+            path: '/posts/:id',
+            component: () =>
+                import ('../views/CurrentCard'),
+            name: 'current-card'
+        },
+
+        {
+            path: '/create',
+            component: () =>
+                import ('../views/CreatePost'),
+            name: 'create-post'
         }
     ]
 })
